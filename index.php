@@ -9,10 +9,34 @@
 	echo json_encode($usuarios);
 
 	*/
-
+	//Carrega Um usuário
 	$teste1 = new Usuario();
 	$teste1 -> loadByID(1);
 
 	echo $teste1;
+
+	echo "<br>";
+
+	//Carrega uma lista de Usuários
+
+	$lista = Usuario::getList();
+	
+	echo json_encode($lista);
+	echo "<hr>";
+
+	$busca = Usuario::search("Ganço");
+
+	echo "<br> Buscando por Ganço: ";
+	echo json_encode($busca);
+
+	//carrega um usuário usando o login e a senha
+	
+	$usuario = new Usuario();
+	$usuario->login("Antonio","ASDR");
+	echo "<br> Testando o Login: ";
+	echo $usuario;
+	
+
+
 
 ?>

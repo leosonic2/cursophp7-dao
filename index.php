@@ -35,6 +35,17 @@
 	$usuario->login("Antonio","ASDR");
 	echo "<br> Testando o Login: ";
 	echo $usuario;
+
+
+	//Fazendo um insert de um usuario novo
+
+	echo "<br>";
+
+	$aluno = new Usuario("aluno","@lun0s");
+
+	$aluno->insert();
+
+	echo $aluno;
 	
 
 

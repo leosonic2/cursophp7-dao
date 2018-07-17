@@ -30,12 +30,12 @@
 	echo json_encode($busca);
 
 	//carrega um usuário usando o login e a senha
-	
+	/*
 	$usuario = new Usuario();
 	$usuario->login("Antonio","ASDR");
 	echo "<br> Testando o Login: ";
 	echo $usuario;
-
+	*/
 
 	//Fazendo um insert de um usuario novo
 	/*
@@ -48,6 +48,9 @@
 	echo $aluno;
 	*/
 
+	//Alterar um usuario
+
+	/*
 	$usuario2 = new Usuario();
 
 	$usuario2->loadByID(8);
@@ -57,6 +60,13 @@
 	echo "<br>";
 	echo "Update: ".$usuario2;
 
+	*/
+
+	$usuario = new Usuario();
+	$usuario->loadByID(7);
+	$usuario->delete();
+
+	echo "<br> Testando o delete: ".$usuario;
 
 
 ?>

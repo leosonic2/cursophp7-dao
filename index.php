@@ -38,7 +38,7 @@
 
 
 	//Fazendo um insert de um usuario novo
-
+	/*
 	echo "<br>";
 
 	$aluno = new Usuario("aluno","@lun0s");
@@ -46,7 +46,16 @@
 	$aluno->insert();
 
 	echo $aluno;
-	
+	*/
+
+	$usuario2 = new Usuario();
+
+	$usuario2->loadByID(8);
+
+	$usuario2->update("professor","!@#!@$!@");
+
+	echo "<br>";
+	echo "Update: ".$usuario2;
 
 
 
